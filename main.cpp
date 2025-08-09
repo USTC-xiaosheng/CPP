@@ -1,6 +1,6 @@
 #include <iostream>
 #include <sstream>
-#include "test.h"
+#include "leetcode/inc/test.h"
 #include <thread>
 
 typedef unsigned long long ULL;
@@ -17,14 +17,15 @@ ULL getThreadIdOfULL(const std::thread::id & id)
     return std::stoull(getThreadIdOfString(id));
 }
 
-int main() {
-    std::thread::id id = std::this_thread::get_id();
-    printf("cout ----- id : %llu \n", id);
-    std::cout << "cout ----- id : " << id << std::endl;
-    std::cout << "getThreadIdOfString ----- id : " << getThreadIdOfString(id) << std::endl;
-    std::cout << "getThreadIdOfULL ----- id : " << getThreadIdOfULL(id) << std::endl;
-    return 0;
-}
+// int main() {
+//     const std::thread::id id = std::this_thread::get_id();
+//     printf("cout ----- id : %llu \n", id);
+//     std::cout << "cout ----- id : " << id << std::endl;
+//     std::cout << "getThreadIdOfString ----- id : " << getThreadIdOfString(id) << std::endl;
+//     std::cout << "getThreadIdOfULL ----- id : " << getThreadIdOfULL(id) << std::endl;
+//     std::cout << __cplusplus<<std::endl;
+//     return 0;
+// }
 
 
 // TIP See CLion help at <a
